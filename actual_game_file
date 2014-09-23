@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<script>
+
+function Person(name, speed, stops) {
+	this.name = name;
+	this.speed = speed;
+	this.stops = stops;
+	this.position = 0; 
+	this.advance = function() {
+		this.position = this.position + this.speed;
+	}
+};
+
+var personOne = new Person("Katie", 20, 6);
+var personTwo = new Person("Rachel", 40, 8);
+
+alert("Katie and Rachel are both about to have babies at the same hospital. The hospital is 150 miles away. Keep watch to see who will get to the hospital first!");
+
+while (personOne.position <= 150 && personTwo.position <= 150) {
+	personOne.advance();
+	personTwo.advance();
+	console.log(personOne.position); 
+
+alert(personOne.name + " is at mile marker " + personOne.position + ".");
+alert("While " + personTwo.name + " is at mile marker " + personTwo.position + ".");
+
+}
+
+
+
+
+</script>
